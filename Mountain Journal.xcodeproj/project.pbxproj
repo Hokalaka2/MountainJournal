@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D08B85E22870C74C00C85152 /* Mountain_JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B85E12870C74C00C85152 /* Mountain_JournalApp.swift */; };
+		D08B85E42870C74C00C85152 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B85E32870C74C00C85152 /* ContentView.swift */; };
+		D08B85E62870C75000C85152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08B85E52870C75000C85152 /* Assets.xcassets */; };
+		D08B85E92870C75000C85152 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08B85E82870C75000C85152 /* Preview Assets.xcassets */; };
+		D08B85EB2870C75000C85152 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B85EA2870C75000C85152 /* Persistence.swift */; };
+		D08B85EE2870C75000C85152 /* Mountain_Journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D08B85EC2870C75000C85152 /* Mountain_Journal.xcdatamodeld */; };
+		D08B85F82870C75100C85152 /* Mountain_JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B85F72870C75100C85152 /* Mountain_JournalTests.swift */; };
+		D08B86022870C75100C85152 /* Mountain_JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B86012870C75100C85152 /* Mountain_JournalUITests.swift */; };
+		D08B86042870C75100C85152 /* Mountain_JournalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B86032870C75100C85152 /* Mountain_JournalUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D08B85F42870C75100C85152 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08B85D62870C74C00C85152 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D08B85DD2870C74C00C85152;
+			remoteInfo = "Mountain Journal";
+		};
+		D08B85FE2870C75100C85152 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08B85D62870C74C00C85152 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D08B85DD2870C74C00C85152;
+			remoteInfo = "Mountain Journal";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D08B85DE2870C74C00C85152 /* Mountain Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mountain Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08B85E12870C74C00C85152 /* Mountain_JournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mountain_JournalApp.swift; sourceTree = "<group>"; };
+		D08B85E32870C74C00C85152 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D08B85E52870C75000C85152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D08B85E82870C75000C85152 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D08B85EA2870C75000C85152 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D08B85ED2870C75000C85152 /* Mountain_Journal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mountain_Journal.xcdatamodel; sourceTree = "<group>"; };
+		D08B85F32870C75100C85152 /* Mountain JournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mountain JournalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08B85F72870C75100C85152 /* Mountain_JournalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mountain_JournalTests.swift; sourceTree = "<group>"; };
+		D08B85FD2870C75100C85152 /* Mountain JournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mountain JournalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08B86012870C75100C85152 /* Mountain_JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mountain_JournalUITests.swift; sourceTree = "<group>"; };
+		D08B86032870C75100C85152 /* Mountain_JournalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mountain_JournalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D08B85DB2870C74C00C85152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08B85F02870C75100C85152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08B85FA2870C75100C85152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D08B85D52870C74C00C85152 = {
+			isa = PBXGroup;
+			children = (
+				D08B85E02870C74C00C85152 /* Mountain Journal */,
+				D08B85F62870C75100C85152 /* Mountain JournalTests */,
+				D08B86002870C75100C85152 /* Mountain JournalUITests */,
+				D08B85DF2870C74C00C85152 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D08B85DF2870C74C00C85152 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D08B85DE2870C74C00C85152 /* Mountain Journal.app */,
+				D08B85F32870C75100C85152 /* Mountain JournalTests.xctest */,
+				D08B85FD2870C75100C85152 /* Mountain JournalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D08B85E02870C74C00C85152 /* Mountain Journal */ = {
+			isa = PBXGroup;
+			children = (
+				D08B85E12870C74C00C85152 /* Mountain_JournalApp.swift */,
+				D08B85E32870C74C00C85152 /* ContentView.swift */,
+				D08B85E52870C75000C85152 /* Assets.xcassets */,
+				D08B85EA2870C75000C85152 /* Persistence.swift */,
+				D08B85EC2870C75000C85152 /* Mountain_Journal.xcdatamodeld */,
+				D08B85E72870C75000C85152 /* Preview Content */,
+			);
+			path = "Mountain Journal";
+			sourceTree = "<group>";
+		};
+		D08B85E72870C75000C85152 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D08B85E82870C75000C85152 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D08B85F62870C75100C85152 /* Mountain JournalTests */ = {
+			isa = PBXGroup;
+			children = (
+				D08B85F72870C75100C85152 /* Mountain_JournalTests.swift */,
+			);
+			path = "Mountain JournalTests";
+			sourceTree = "<group>";
+		};
+		D08B86002870C75100C85152 /* Mountain JournalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D08B86012870C75100C85152 /* Mountain_JournalUITests.swift */,
+				D08B86032870C75100C85152 /* Mountain_JournalUITestsLaunchTests.swift */,
+			);
+			path = "Mountain JournalUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D08B85DD2870C74C00C85152 /* Mountain Journal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D08B86072870C75100C85152 /* Build configuration list for PBXNativeTarget "Mountain Journal" */;
+			buildPhases = (
+				D08B85DA2870C74C00C85152 /* Sources */,
+				D08B85DB2870C74C00C85152 /* Frameworks */,
+				D08B85DC2870C74C00C85152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mountain Journal";
+			productName = "Mountain Journal";
+			productReference = D08B85DE2870C74C00C85152 /* Mountain Journal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D08B85F22870C75100C85152 /* Mountain JournalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D08B860A2870C75100C85152 /* Build configuration list for PBXNativeTarget "Mountain JournalTests" */;
+			buildPhases = (
+				D08B85EF2870C75100C85152 /* Sources */,
+				D08B85F02870C75100C85152 /* Frameworks */,
+				D08B85F12870C75100C85152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D08B85F52870C75100C85152 /* PBXTargetDependency */,
+			);
+			name = "Mountain JournalTests";
+			productName = "Mountain JournalTests";
+			productReference = D08B85F32870C75100C85152 /* Mountain JournalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D08B85FC2870C75100C85152 /* Mountain JournalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D08B860D2870C75100C85152 /* Build configuration list for PBXNativeTarget "Mountain JournalUITests" */;
+			buildPhases = (
+				D08B85F92870C75100C85152 /* Sources */,
+				D08B85FA2870C75100C85152 /* Frameworks */,
+				D08B85FB2870C75100C85152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D08B85FF2870C75100C85152 /* PBXTargetDependency */,
+			);
+			name = "Mountain JournalUITests";
+			productName = "Mountain JournalUITests";
+			productReference = D08B85FD2870C75100C85152 /* Mountain JournalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D08B85D62870C74C00C85152 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D08B85DD2870C74C00C85152 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					D08B85F22870C75100C85152 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D08B85DD2870C74C00C85152;
+					};
+					D08B85FC2870C75100C85152 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D08B85DD2870C74C00C85152;
+					};
+				};
+			};
+			buildConfigurationList = D08B85D92870C74C00C85152 /* Build configuration list for PBXProject "Mountain Journal" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D08B85D52870C74C00C85152;
+			productRefGroup = D08B85DF2870C74C00C85152 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D08B85DD2870C74C00C85152 /* Mountain Journal */,
+				D08B85F22870C75100C85152 /* Mountain JournalTests */,
+				D08B85FC2870C75100C85152 /* Mountain JournalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D08B85DC2870C74C00C85152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08B85E92870C75000C85152 /* Preview Assets.xcassets in Resources */,
+				D08B85E62870C75000C85152 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08B85F12870C75100C85152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08B85FB2870C75100C85152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D08B85DA2870C74C00C85152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08B85EB2870C75000C85152 /* Persistence.swift in Sources */,
+				D08B85E42870C74C00C85152 /* ContentView.swift in Sources */,
+				D08B85EE2870C75000C85152 /* Mountain_Journal.xcdatamodeld in Sources */,
+				D08B85E22870C74C00C85152 /* Mountain_JournalApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08B85EF2870C75100C85152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08B85F82870C75100C85152 /* Mountain_JournalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08B85F92870C75100C85152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08B86022870C75100C85152 /* Mountain_JournalUITests.swift in Sources */,
+				D08B86042870C75100C85152 /* Mountain_JournalUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D08B85F52870C75100C85152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D08B85DD2870C74C00C85152 /* Mountain Journal */;
+			targetProxy = D08B85F42870C75100C85152 /* PBXContainerItemProxy */;
+		};
+		D08B85FF2870C75100C85152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D08B85DD2870C74C00C85152 /* Mountain Journal */;
+			targetProxy = D08B85FE2870C75100C85152 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D08B86052870C75100C85152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D08B86062870C75100C85152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D08B86082870C75100C85152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mountain Journal/Preview Content\"";
+				DEVELOPMENT_TEAM = ULT55RDT45;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hokalaka.Mountain-Journal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D08B86092870C75100C85152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mountain Journal/Preview Content\"";
+				DEVELOPMENT_TEAM = ULT55RDT45;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hokalaka.Mountain-Journal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D08B860B2870C75100C85152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ULT55RDT45;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hokalaka.Mountain-JournalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mountain Journal.app/Mountain Journal";
+			};
+			name = Debug;
+		};
+		D08B860C2870C75100C85152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ULT55RDT45;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hokalaka.Mountain-JournalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mountain Journal.app/Mountain Journal";
+			};
+			name = Release;
+		};
+		D08B860E2870C75100C85152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ULT55RDT45;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hokalaka.Mountain-JournalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mountain Journal";
+			};
+			name = Debug;
+		};
+		D08B860F2870C75100C85152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ULT55RDT45;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Hokalaka.Mountain-JournalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mountain Journal";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D08B85D92870C74C00C85152 /* Build configuration list for PBXProject "Mountain Journal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D08B86052870C75100C85152 /* Debug */,
+				D08B86062870C75100C85152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D08B86072870C75100C85152 /* Build configuration list for PBXNativeTarget "Mountain Journal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D08B86082870C75100C85152 /* Debug */,
+				D08B86092870C75100C85152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D08B860A2870C75100C85152 /* Build configuration list for PBXNativeTarget "Mountain JournalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D08B860B2870C75100C85152 /* Debug */,
+				D08B860C2870C75100C85152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D08B860D2870C75100C85152 /* Build configuration list for PBXNativeTarget "Mountain JournalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D08B860E2870C75100C85152 /* Debug */,
+				D08B860F2870C75100C85152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D08B85EC2870C75000C85152 /* Mountain_Journal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D08B85ED2870C75000C85152 /* Mountain_Journal.xcdatamodel */,
+			);
+			currentVersion = D08B85ED2870C75000C85152 /* Mountain_Journal.xcdatamodel */;
+			path = Mountain_Journal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D08B85D62870C74C00C85152 /* Project object */;
+}
