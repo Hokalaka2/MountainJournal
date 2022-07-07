@@ -16,7 +16,7 @@
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="username" optional="YES" attributeType="String"/>
-        <relationship name="has_many" optional="YES" toMany="YES" maxCount="11" deletionRule="Nullify" ordered="YES" destinationEntity="Note" inverseName="noteUser" inverseEntity="Note"/>
+        <relationship name="has_many" optional="YES" toMany="YES" maxCount="11" deletionRule="Nullify" destinationEntity="Note" inverseName="noteUser" inverseEntity="Note"/>
     </entity>
     <elements>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>

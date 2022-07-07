@@ -9,12 +9,13 @@ import SwiftUI
 
 struct NavigationButtonView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Label("Profile", systemImage: "person")
     }
 }
 
 struct NavigationButtonView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationButtonView()
+            .previewLayout(.sizeThatFits)
     }
 }

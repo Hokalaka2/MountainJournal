@@ -13,13 +13,18 @@ struct NavigationView: View {
             NavigationLink(destination: ProfileView()){
                 NavigationButtonView()
             }
+            .padding()
             NavigationLink(destination: ProfileView()) {
                 NavigationButtonView()
             }
+            .padding()
             NavigationLink(destination: ProfileView()) {
                 NavigationButtonView()
             }
+            .padding()
         }
+        .foregroundColor(.blue)
+        .cornerRadius(60)
     }
 }
 

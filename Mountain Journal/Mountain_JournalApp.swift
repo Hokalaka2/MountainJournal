@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 @main
 struct Mountain_JournalApp: App {
@@ -13,7 +14,7 @@ struct Mountain_JournalApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MapView(coordinate: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868))
+            MainView()
         }
     }
 }
