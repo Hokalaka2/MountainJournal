@@ -10,10 +10,34 @@ import MapKit
 
 struct MainView: View {
     var body: some View {
-        VStack {
+        TabView{
             MapView(coordinate: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868))
-            NavigationView()
+                .tabItem {
+                    Label("Map", systemImage: "map")
+                    Text("Map")
+                }
+            ProfileView()
+                .tabItem{
+                    Label("Profile", systemImage: "person")
+                    Text("Notes")
+                }
+            
+            ProfileView()
+                .tabItem{
+                    Label("Locations", systemImage: "pin")
+                    Text("Location")
+
+                }
+            
+            
+            ProfileView()
+                .tabItem{
+                    Label("Notes", systemImage: "note.text")
+                    Text("Notes")
+
+                }
         }
+        
     }
 }
 
