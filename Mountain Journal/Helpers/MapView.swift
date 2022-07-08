@@ -16,6 +16,7 @@ struct MapView: View {
             .onAppear {
                 setRegion(coordinate)
             }
+            .ignoresSafeArea(edges: .top)
     }
     
     private func setRegion(_ coordinate: CLLocationCoordinate2D){

@@ -22,18 +22,17 @@ struct MainView: View {
                     Text("Notes")
                 }
             
-            ProfileView()
+            ProfileView()	
                 .tabItem{
                     Label("Locations", systemImage: "pin")
                     Text("Location")
 
                 }
             
-            
-            ProfileView()
+            NotesView()
                 .tabItem{
-                    Label("Notes", systemImage: "note.text")
-                    Text("Notes")
+                    Label("My Notes", systemImage: "note.text")
+                    Text("My Notes")
 
                 }
         }
