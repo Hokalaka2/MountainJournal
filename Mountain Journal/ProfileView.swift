@@ -9,7 +9,36 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack{
+                ProfileImageView(image: Image("Otis_Cat"))
+                    .padding()
+                VStack{
+                    Text("Hokalaka")
+                    Text("email@gmail.com")
+                }
+            }
+            NavigationView{
+                List{
+                    NavigationLink(destination: MainView()){
+                        Text("My Journals")
+                    }
+                    NavigationLink(destination: MainView()){
+                        Text("My Locations")
+                    }
+                    NavigationLink(destination: MainView()){
+                        Text("Saved Journals")
+                    }
+
+                }
+                .navigationTitle("Your Saved Info")
+                
+            }
+            
+            
+            Spacer()
+        }
+        .navigationBarTitle("Profile")
     }
 }
 
