@@ -22,6 +22,8 @@ struct MainView: View {
                     Label("Profile", systemImage: "person")
                     Text("Notes")
                 }
+            
+            //if User is in close enough area
             if(true){
                 ProfileView()
                     .tabItem{
@@ -30,7 +32,7 @@ struct MainView: View {
                 }
             }
             else{
-                
+
             }
             NotesView()
                 .tabItem{

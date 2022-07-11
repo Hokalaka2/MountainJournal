@@ -12,11 +12,28 @@ struct MapView: View {
     var coordinate: CLLocationCoordinate2D
     @State private var region = MKCoordinateRegion()
     var body: some View {
-        Map(coordinateRegion: $region)
-            .onAppear {
-                setRegion(coordinate)
+        ZStack{
+            Map(coordinateRegion: $region)
+                .onAppear {
+                    setRegion(coordinate)
+                }
+                .ignoresSafeArea(edges: .top)
+            
+            //if User is in close enough area
+            VStack{
+                Spacer()
+                HStack{
+                    Spacer()
+                    Button(action: {}){
+                        SeeJournal()
+                            .frame(width:100,height:100)
+                            .cornerRadius(14)
+                    }
+                    .padding()
+                    .padding(.bottom, 38.0)
+                }
             }
-            .ignoresSafeArea(edges: .top)
+        }
     }
     
     private func setRegion(_ coordinate: CLLocationCoordinate2D){
