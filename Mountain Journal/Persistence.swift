@@ -14,8 +14,11 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newItem = Pin(context: viewContext)
+            newItem.id = UUID()
+            newItem.name = "Middlebury"
+            newItem.latitude = 44.015337
+            newItem.longitude = -73.16734
         }
         do {
             try viewContext.save()

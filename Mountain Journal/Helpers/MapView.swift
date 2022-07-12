@@ -11,9 +11,17 @@ import MapKit
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
     @State private var region = MKCoordinateRegion()
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [])
+    var pins: FetchedResults<Pin>
+    
     var body: some View {
         ZStack{
-            Map(coordinateRegion: $region)
+            Map(coordinateRegion: $region, annotationItems: pins) { pin in
+                MapMarker(coordinate: CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude))
+                
+            }
                 .onAppear {
                     setRegion(coordinate)
                 }
@@ -46,6 +54,6 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(coordinate: CLLocationCoordinate2D(latitude: 44.015337, longitude: -73.16734))
+        MapView(coordinate: CLLocationCoordinate2D(latitude: 44.015337, longitude: -73.16734)).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
