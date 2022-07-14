@@ -37,8 +37,8 @@ struct MainView: View {
             }
             NotesView()
                 .tabItem{
-                    Label("Locationnsss", systemImage: "pin")
-                    Text("Locationn")
+                    Label("Location", systemImage: "pin")
+                    Text("Location")
 
                 }
             
