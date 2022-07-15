@@ -10,19 +10,30 @@ import SwiftUI
 struct ViewAllJournals: View {
     var body: some View {
         NavigationView {
-            List{
-                NavigationLink(destination: MainView()){
-                    ViewIndividualJournal()
+            ZStack {
+                RoundedRectangle(cornerRadius: 25, style: .continuous)
+                    .fill(Color.black)
+                    .frame(width: 350, height: 770)
+                
+                VStack(spacing: 0) {
+                    NavigationLink(destination: MainView()){
+                        ViewIndividualJournal()
+                    }
+                    NavigationLink(destination: MainView()){
+                        ViewIndividualJournal()
+                    }
+                    NavigationLink(destination: MainView()){
+                        ViewIndividualJournal()
+                    }
                 }
-                NavigationLink(destination: MainView()){
-                    ViewIndividualJournal()
-                }
-                NavigationLink(destination: MainView()){
-                    ViewIndividualJournal()
-                }
+                .position(x: 200, y: 70)
+                
             }
-            .navigationTitle("Journals")
+            
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
+        
     }
 }
 
