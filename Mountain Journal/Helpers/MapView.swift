@@ -11,6 +11,7 @@ import MapKit
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
     @State private var region = MKCoordinateRegion()
+    @State private var userTrackingMode: MapUserTrackingMode = .follow
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: Pin.entity(), sortDescriptors: [])
@@ -18,7 +19,12 @@ struct MapView: View {
     
     var body: some View {
         ZStack{
-            Map(coordinateRegion: $region, annotationItems: pins) { pin in
+            Map(coordinateRegion: $region,
+                interactionModes: MapInteractionModes.all,
+                showsUserLocation: true,
+                userTrackingMode: $userTrackingMode,
+                annotationItems: pins
+            ) { pin in
                 MapMarker(coordinate: CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude))
                 
             }

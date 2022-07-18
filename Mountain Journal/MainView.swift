@@ -10,46 +10,60 @@ import MapKit
 import CoreData
 
 struct MainView: View {
+    @State private var isPresenting = false
+    @State private var selectedItem = 1
+    @State private var oldSelectedItem = 1
     
     var body: some View {
-        TabView{
+        TabView(selection: $selectedItem){
             MapView(coordinate: CLLocationCoordinate2D(latitude: 44.015337, longitude: -73.16734))
                 .tabItem {
                     Label("Map", systemImage: "map")
                     Text("Map")
-                }
+                }.tag(1)
             ProfileView()
                 .tabItem{
                     Label("Profile", systemImage: "person")
                     Text("Notes")
+                }.tag(2)
+            
+            AddNewJournal()
+                .tabItem{
+                    Label("Add New Entry", systemImage: "plus")
+                    Text("Add New Entry")
+                }.tag(3)
+                .onAppear(){
+                    self.isPresenting = true
                 }
             
-            //if User is in close enough area
-            if(true){
-                ProfileView()
-                    .tabItem{
-                        Label("Add New Entry", systemImage: "plus")
-                        Text("Add New Entry")
-                }
-            }
-            else{
-
-            }
             NotesView()
                 .tabItem{
                     Label("Location", systemImage: "pin")
                     Text("Location")
 
-                }
+                }.tag(4)
             
             NotesView()
                 .tabItem{
                     Label("My Notes", systemImage: "note.text")
                     Text("My Notes")
 
-                }
+                }.tag(5)
         }
-        
+        .sheet(isPresented: $isPresenting, onDismiss: {
+                        self.selectedItem = self.oldSelectedItem
+                    }) {
+                        NavigationView {
+                            AddNewJournal()
+                                .toolbar{
+                                    ToolbarItem(placement: .cancellationAction){
+                                        Button("Dismiss"){
+                                            isPresenting = false
+                                        }
+                                    }
+                                }
+                        }
+                }
     }
 }
 
