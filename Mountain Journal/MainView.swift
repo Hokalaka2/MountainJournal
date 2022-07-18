@@ -10,13 +10,23 @@ import MapKit
 import CoreData
 
 struct MainView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(
+            sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: true)],
+            animation: .default)
+    private var notes: FetchedResults<Note>
+    
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [])
+        var pins: FetchedResults<Pin>
+    
     @State private var isPresenting = false
     @State private var selectedItem = 1
     @State private var oldSelectedItem = 1
     
     var body: some View {
         TabView(selection: $selectedItem){
-            MapView(coordinate: CLLocationCoordinate2D(latitude: 44.015337, longitude: -73.16734))
+            MapView(coordinate: CLLocationCoordinate2D(latitude: 44.015337, longitude: -73.16734), pins: pins)
                 .tabItem {
                     Label("Map", systemImage: "map")
                     Text("Map")

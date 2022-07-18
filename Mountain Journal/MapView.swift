@@ -12,9 +12,6 @@ struct MapView: View {
     var coordinate: CLLocationCoordinate2D
     @State private var region = MKCoordinateRegion()
     @State private var userTrackingMode: MapUserTrackingMode = .follow
-    
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: Pin.entity(), sortDescriptors: [])
     var pins: FetchedResults<Pin>
     
     var body: some View {
@@ -59,7 +56,10 @@ struct MapView: View {
 }
 
 struct MapView_Previews: PreviewProvider {
+    @FetchRequest(entity: Pin.entity(), sortDescriptors: [])
+        static var pins: FetchedResults<Pin>
+    
     static var previews: some View {
-        MapView(coordinate: CLLocationCoordinate2D(latitude: 44.015337, longitude: -73.16734)).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        MapView(coordinate: CLLocationCoordinate2D(latitude: 44.015337, longitude: -73.16734), pins: pins)
     }
 }
