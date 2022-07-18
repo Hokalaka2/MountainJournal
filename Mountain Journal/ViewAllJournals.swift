@@ -15,7 +15,7 @@ struct ViewAllJournals: View {
                     .fill(Color.black)
                     .frame(width: 350, height: 770)
                 
-                VStack(spacing: 0) {
+                VStack(spacing: 15) {
                     NavigationLink(destination: MainView()){
                         ViewIndividualJournal()
                     }
@@ -29,7 +29,6 @@ struct ViewAllJournals: View {
                 .position(x: 200, y: 70)
                 
             }
-            
             .navigationBarTitle("")
             .navigationBarHidden(true)
         }

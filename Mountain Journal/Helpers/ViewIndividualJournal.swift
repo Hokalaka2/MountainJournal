@@ -9,34 +9,61 @@ import SwiftUI
 
 struct ViewIndividualJournal: View {
     var body: some View {
-        HStack(spacing: -17){
-            Text("Tristan Meyer")
-                .font(.custom("Name", size: 15.0))
-                .foregroundColor(Color.white)
+        VStack(spacing: -17){
+            Text("Users Name")
+                .position(x:70,y:10)
+                .font(.title2)
+            
+            Text("Insert text preview")
+                .position(x:70,y:10)
+                .font(.caption)
                 .multilineTextAlignment(.leading)
-                .lineLimit(1)
-                .frame(width: 140.0, height: 35.0)
-                .background(Color.gray)
-                .cornerRadius(20, corners: [.topLeft, .bottomRight])
-
+                .lineLimit(3)
+            
+            HStack(spacing: -5) {
+                Label("", systemImage: "arrow.down")
+                Text("Save")
+            }
             
             ZStack {
-                Text("")
-                    .frame(width: 190.0, height: 35.0)
-                    .background(Color.gray)
-                    .cornerRadius(60, corners: [.topLeft, .bottomRight])
-                
-                Text("First Little bit of Journal goes here with blah bl")
-                    .multilineTextAlignment(.leading)
-                    .lineLimit(1)
-                    .padding(.leading)
-                    .frame(width: 185.0, height: 30.0)
-                    .font(.custom("JournalPreviewText", size: 11.0))
-                    .background(Color.white)
-                    .cornerRadius(20, corners: [.topLeft, .bottomRight])
+                RoundedRectangle(cornerRadius: 10)
+                    .size(width: 60, height: 30)
+                    .position(x: <#T##CGFloat#>, y: <#T##CGFloat#>)
             }
-
+            
+                
+            
+//            Text("Tristan Meyer")
+//                .font(.custom("Name", size: 15.0))
+//                .foregroundColor(Color.white)
+//                .multilineTextAlignment(.leading)
+//                .lineLimit(1)
+//                .frame(width: 140.0, height: 35.0)
+//                .background(Color.gray)
+//                .cornerRadius(10, corners: [.topLeft, .bottomRight, .bottomLeft])
+//
+//
+//            ZStack {
+//                Text("")
+//                    .frame(width: 190.0, height: 35.0)
+//                    .background(Color.gray)
+//                    .cornerRadius(60, corners: [.topLeft, .bottomRight])
+//
+//                Text("First Little bit of Journal goes here with blah bl")
+//                    .multilineTextAlignment(.leading)
+//                    .lineLimit(1)
+//                    .padding(.leading)
+//                    .frame(width: 185.0, height: 30.0)
+//                    .font(.custom("JournalPreviewText", size: 11.0))
+//                    .background(Color.white)
+//                    .cornerRadius(20, corners: [.bottomRight])
+//                    .cornerRadius(5, corners: [.topLeft, .bottomLeft])
+//            }
+//        }
+//    }
+//}
         }
+        .frame(width: 360, height:130)
     }
 }
 
@@ -60,5 +87,6 @@ struct RoundedCorner: Shape {
 struct ViewIndividualJournal_Previews: PreviewProvider {
     static var previews: some View {
         ViewIndividualJournal()
+//            .previewLayout(.fixed(width: 400, height: 60))
     }
 }
