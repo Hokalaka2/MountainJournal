@@ -37,7 +37,7 @@ struct MainView: View {
                     Text("Notes")
                 }.tag(2)
             
-            AddNewJournal()
+            Text("An Error Occured")
                 .tabItem{
                     Label("Add New Entry", systemImage: "plus")
                     Text("Add New Entry")
@@ -64,7 +64,7 @@ struct MainView: View {
                         self.selectedItem = self.oldSelectedItem
                     }) {
                         NavigationView {
-                            AddNewJournal()
+                            AddNewJournal(isPresenting: $isPresenting)
                                 .toolbar{
                                     ToolbarItem(placement: .cancellationAction){
                                         Button("Dismiss"){
