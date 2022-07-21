@@ -131,8 +131,8 @@
 			children = (
 				D0A98C1E2885ABA8001DDC11 /* Mountain-Journal-Info.plist */,
 				D08B85E12870C74C00C85152 /* Mountain_JournalApp.swift */,
-				D0989F0B2877560E0050B0C0 /* MainView.swift */,
 				D0989F0D2878A8500050B0C0 /* NotesView.swift */,
+				D0989F0B2877560E0050B0C0 /* MainView.swift */,
 				D0989F07287737E30050B0C0 /* ProfileView.swift */,
 				D0A98C1F2885AFDE001DDC11 /* AddNewJournal.swift */,
 				D0DC1EEE28898E760061AAE6 /* PreloadNotes.json */,

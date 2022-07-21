@@ -24,6 +24,7 @@ struct PersistenceController {
 //            newItem.name = "Middlebury"
 //            newItem.latitude = 44.015337
 //            newItem.longitude = -73.16734
+            newItem.title = "Mountaintin"
         }
         do {
             try viewContext.save()

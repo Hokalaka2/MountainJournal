@@ -12,11 +12,6 @@ import CoreData
 struct MainView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    @FetchRequest(
-            sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: true)],
-            animation: .default)
-    private var notes: FetchedResults<Note>
-    
     @FetchRequest(entity: Pin.entity(), sortDescriptors: [])
         var pins: FetchedResults<Pin>
     
@@ -45,13 +40,13 @@ struct MainView: View {
                     self.isPresenting = true
                 }
             
-            NotesView()
+            ViewAllJournals()
                 .tabItem{
                     Label("Location", systemImage: "pin")
                     Text("Location")
                 }.tag(4)
             
-            NotesView()
+            ViewAllJournals()
                 .tabItem{
                     Label("My Notes", systemImage: "note.text")
                     Text("My Notes")

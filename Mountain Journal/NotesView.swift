@@ -12,17 +12,19 @@ struct NotesView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
-            sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: true)],
+            sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: false)],
             animation: .default)
     private var notes: FetchedResults<Note>
     
     var body: some View {
-        Text("Journal Entries")
-        List{
-            ForEach(notes) { note in
-                Text("Author:  \(note.author ?? "otis")")
-                Text("Text: \(note.text ?? "otis")")
-                Text("Date: \(note.timestamp ?? Date())")
+        VStack{
+            Text("Journal Entries")
+            List{
+                ForEach(notes) { note in
+                    Text("Author:  \(note.author ?? "otis")")
+                    Text("Text: \(note.text ?? "otis")")
+                    Text("Date: \(note.timestamp ?? Date())")
+                }
             }
         }
         

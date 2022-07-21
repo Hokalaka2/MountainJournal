@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct ViewIndividualJournal: View {
-    let entry: JournalEntry
+    let entry: Note
     
     var body: some View {
         
         VStack(alignment: .leading) {
             HStack {
-                Text(entry.title)
+                Text(entry.title ?? "No title")
                     .font(.subheadline)
-                Text("by " + entry.author)
+                Text("by \(entry.author ?? "No Author")")
                     .font(.subheadline)
                     .fontWeight(.thin)
                     .foregroundColor(.gray)
             }
                 
             HStack(alignment: .bottom) {
-                Text(entry.body)
+                Text(entry.text ?? "No Body")
                     .frame(width: 240, height: 50, alignment: .topLeading)
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
@@ -46,9 +46,13 @@ struct ViewIndividualJournal: View {
 }
 
 struct ViewIndividualJournal_Previews: PreviewProvider {
-    static var entry = JournalEntry.sampleData[0]
+    static var viewContext = PersistenceController.preview.container.viewContext
+    
     static var previews: some View {
-        ViewIndividualJournal(entry: entry)
-            //.previewLayout(.fixed(width: 350, height: 80))
+        let entry = Note(context: viewContext)
+        entry.title = "Title"
+        entry.text = "text"
+        
+        return ViewIndividualJournal(entry: entry).environment(\.managedObjectContext, viewContext)
     }
 }

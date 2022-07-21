@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ViewAllJournals: View {
     
-    var entries: [JournalEntry]
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(
+            sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: false)],
+            animation: .default)
+    private var entries: FetchedResults<Note>
     
     var body: some View {
         NavigationView {
@@ -19,7 +24,7 @@ struct ViewAllJournals: View {
                         .font(.headline)
                         .padding(.leading)
                         
-                    ForEach(entries, id: \.self) { testEntry in
+                    ForEach(entries) { testEntry in
                         ViewIndividualJournal(entry: testEntry)
                     }
                 }
@@ -35,6 +40,6 @@ struct ViewAllJournals: View {
 struct ViewAllJournals_Previews: PreviewProvider {
     
     static var previews: some View {
-        ViewAllJournals(entries: JournalEntry.sampleData)
+        ViewAllJournals()
     }
 }
