@@ -10,30 +10,34 @@ import SwiftUI
 struct ViewAllJournals: View {
     var body: some View {
         NavigationView {
-            ZStack {
-                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                    .fill(Color.black)
-                    .frame(width: 350, height: 770)
-                
-                VStack(spacing: 0) {
-                    NavigationLink(destination: MainView()){
-                        ViewIndividualJournal()
-                    }
-                    NavigationLink(destination: MainView()){
-                        ViewIndividualJournal()
-                    }
-                    NavigationLink(destination: MainView()){
-                        ViewIndividualJournal()
-                    }
+            ScrollView(.vertical) {
+                VStack(spacing: 15) {
+                    Text("Journals")
+                        .font(.headline)
+                    ViewIndividualJournal()
+                    Rectangle()
+                        .fill(.gray)
+                        .frame(width: 400, height:1)
+                    ViewIndividualJournal()
+                    Rectangle()
+                        .fill(.gray)
+                        .frame(width: 400, height:1)
+                    ViewIndividualJournal()
+                    Rectangle()
+                        .fill(.gray)
+                        .frame(width: 400, height:1)
+                    ViewIndividualJournal()
+                    Rectangle()
+                        .fill(.gray)
+                        .frame(width: 400, height:1)
+                    ViewIndividualJournal()
                 }
-                .position(x: 200, y: 70)
-                
+                .padding()
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
             }
-            
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
         }
-        
+        .foregroundColor(.black)
     }
 }
 
