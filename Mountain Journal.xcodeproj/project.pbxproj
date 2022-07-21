@@ -24,6 +24,7 @@
 		D0989F0E2878A8500050B0C0 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0989F0D2878A8500050B0C0 /* NotesView.swift */; };
 		D0989F102878AA4F0050B0C0 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0989F0F2878AA4F0050B0C0 /* ProfileImageView.swift */; };
 		D0A98C202885AFDE001DDC11 /* AddNewJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A98C1F2885AFDE001DDC11 /* AddNewJournal.swift */; };
+		D0DC1EEF28898E760061AAE6 /* PreloadNotes.json in Resources */ = {isa = PBXBuildFile; fileRef = D0DC1EEE28898E760061AAE6 /* PreloadNotes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D0989F0F2878AA4F0050B0C0 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		D0A98C1E2885ABA8001DDC11 /* Mountain-Journal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mountain-Journal-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D0A98C1F2885AFDE001DDC11 /* AddNewJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewJournal.swift; sourceTree = "<group>"; };
+		D0DC1EEE28898E760061AAE6 /* PreloadNotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PreloadNotes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				D0989F0D2878A8500050B0C0 /* NotesView.swift */,
 				D0989F07287737E30050B0C0 /* ProfileView.swift */,
 				D0A98C1F2885AFDE001DDC11 /* AddNewJournal.swift */,
+				D0DC1EEE28898E760061AAE6 /* PreloadNotes.json */,
 				9572041E2880711300E1911D /* ViewAllJournals.swift */,
 				D0989F02287732330050B0C0 /* MapView.swift */,
 				D0989F04287732750050B0C0 /* Helpers */,
@@ -273,6 +276,7 @@
 			files = (
 				D08B85E92870C75000C85152 /* Preview Assets.xcassets in Resources */,
 				D08B85E62870C75000C85152 /* Assets.xcassets in Resources */,
+				D0DC1EEF28898E760061AAE6 /* PreloadNotes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
