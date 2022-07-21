@@ -22,7 +22,6 @@ struct MainView: View {
     
     @State private var isPresenting = false
     @State private var selectedItem = 1
-    @State private var oldSelectedItem = 1
     
     var body: some View {
         TabView(selection: $selectedItem){
@@ -37,7 +36,7 @@ struct MainView: View {
                     Text("Notes")
                 }.tag(2)
             
-            Text("An Error Occured")
+            Text("")
                 .tabItem{
                     Label("Add New Entry", systemImage: "plus")
                     Text("Add New Entry")
@@ -50,18 +49,16 @@ struct MainView: View {
                 .tabItem{
                     Label("Location", systemImage: "pin")
                     Text("Location")
-
                 }.tag(4)
             
             NotesView()
                 .tabItem{
                     Label("My Notes", systemImage: "note.text")
                     Text("My Notes")
-
                 }.tag(5)
         }
         .sheet(isPresented: $isPresenting, onDismiss: {
-                        self.selectedItem = self.oldSelectedItem
+                        self.selectedItem = 1
                     }) {
                         NavigationView {
                             AddNewJournal(isPresenting: $isPresenting)

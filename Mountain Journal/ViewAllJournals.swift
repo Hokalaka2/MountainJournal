@@ -18,7 +18,7 @@ struct ViewAllJournals: View {
                     Text("Journals")
                         .font(.headline)
                         .padding(.leading)
-                    
+                        
                     ForEach(entries, id: \.self) { testEntry in
                         ViewIndividualJournal(entry: testEntry)
                     }
