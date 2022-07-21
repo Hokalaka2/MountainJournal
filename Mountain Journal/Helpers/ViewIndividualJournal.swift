@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct ViewIndividualJournal: View {
+    let entry: JournalEntry
+    
     var body: some View {
         
         VStack(alignment: .leading) {
-            Text("User's Name")
-                .font(.headline)
-                .padding([.leading, .bottom], 10)
+            HStack {
+                Text(entry.title)
+                    .font(.subheadline)
+                Text("by " + entry.author)
+                    .font(.subheadline)
+                    .fontWeight(.thin)
+                    .foregroundColor(.gray)
+            }
+                
             HStack(alignment: .bottom) {
-                Text("Insert Text Here: Otis is really stupid, this text pennnnis is just testing what multiline will look like so please dont take offense. Still part of the test still part of test almost done test tes test test")
+                Text(entry.body)
+                    .frame(width: 240, height: 50, alignment: .topLeading)
+                    .multilineTextAlignment(.leading)
                     .lineLimit(3)
-                    .padding(.leading,12)
                 VStack (alignment:.leading) {
                     NavigationLink(destination: MainView()){
                         ViewJournalButton()
@@ -28,14 +37,18 @@ struct ViewIndividualJournal: View {
             }
             .font(.caption)
             
+            Rectangle()
+                .fill(.gray)
+                .frame(width: 350, height:1, alignment: .center)
             
         }
     }
 }
 
 struct ViewIndividualJournal_Previews: PreviewProvider {
+    static var entry = JournalEntry.sampleData[0]
     static var previews: some View {
-        ViewIndividualJournal()
+        ViewIndividualJournal(entry: entry)
             //.previewLayout(.fixed(width: 350, height: 80))
     }
 }

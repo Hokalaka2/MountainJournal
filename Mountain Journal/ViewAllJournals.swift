@@ -8,29 +8,20 @@
 import SwiftUI
 
 struct ViewAllJournals: View {
+    
+    var entries: [JournalEntry]
+    
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
-                VStack(spacing: 15) {
+                VStack(alignment: .leading, spacing: 15) {
                     Text("Journals")
                         .font(.headline)
-                    ViewIndividualJournal()
-                    Rectangle()
-                        .fill(.gray)
-                        .frame(width: 400, height:1)
-                    ViewIndividualJournal()
-                    Rectangle()
-                        .fill(.gray)
-                        .frame(width: 400, height:1)
-                    ViewIndividualJournal()
-                    Rectangle()
-                        .fill(.gray)
-                        .frame(width: 400, height:1)
-                    ViewIndividualJournal()
-                    Rectangle()
-                        .fill(.gray)
-                        .frame(width: 400, height:1)
-                    ViewIndividualJournal()
+                        .padding(.leading)
+                    
+                    ForEach(entries, id: \.self) { testEntry in
+                        ViewIndividualJournal(entry: testEntry)
+                    }
                 }
                 .padding()
                 .navigationBarTitle("")
@@ -42,7 +33,8 @@ struct ViewAllJournals: View {
 }
 
 struct ViewAllJournals_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ViewAllJournals()
+        ViewAllJournals(entries: JournalEntry.sampleData)
     }
 }
