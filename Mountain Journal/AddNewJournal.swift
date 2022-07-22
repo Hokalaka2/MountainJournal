@@ -11,12 +11,16 @@ struct AddNewJournal: View {
     @Binding var isPresenting: Bool
     @Environment(\.managedObjectContext) private var viewContext
     @State private var author = ""
+    @State private var title = ""
     @State private var text = ""
     
     var body: some View {
         Form{
             Section(header: Text("Author")){
                 TextField("Author", text:$author)
+            }
+            Section(header: Text("Title")){
+                TextField("Title", text: $title)
             }
             Section(header: Text("Text")){
                 TextEditor(text: $text)
@@ -32,11 +36,13 @@ struct AddNewJournal: View {
                         note.id = UUID()
                         note.timestamp = Date()
                         note.author = self.author
+                        note.title = self.title
                         note.text = self.text
                         isPresenting = false
                         do {
                             try viewContext.save()
                             author = ""
+                            title = ""
                             text = ""
                             print("Saved")
                         } catch {
