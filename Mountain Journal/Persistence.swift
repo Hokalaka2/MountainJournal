@@ -14,17 +14,19 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = Note(context: viewContext)
+            let newNote = Note(context: viewContext)
+            newNote.id = UUID()
+            newNote.author = "Otis"
+            newNote.text = "YO, this is otis and this is my first entry into the notes"
+            newNote.timestamp = Date()
+            newNote.title = "Mountaintin"
+            
+            let newItem = Pin(context: viewContext)
             newItem.id = UUID()
-            newItem.author = "Otis"
-            newItem.text = "YO, this is otis and this is my first entry into the notes"
-            newItem.timestamp = Date()
-//            let newItem = Pin(context: viewContext)
-//            newItem.id = UUID()
-//            newItem.name = "Middlebury"
-//            newItem.latitude = 44.015337
-//            newItem.longitude = -73.16734
-            newItem.title = "Mountaintin"
+            newItem.name = "Middlebury"
+            newItem.latitude = 44.015337
+            newItem.longitude = -73.16734
+            
         }
         do {
             try viewContext.save()

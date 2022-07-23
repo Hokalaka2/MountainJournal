@@ -9,9 +9,14 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    var coordinate: CLLocationCoordinate2D
+    @StateObject var locationManager = LocationManager()
+    
+    var coordinate: CLLocationCoordinate2D { return locationManager.lastLocation?.coordinate ?? CLLocationCoordinate2D(latitude: 38.5733, longitude: -109.5498)
+    }
+    
     @State private var region = MKCoordinateRegion()
     @State private var userTrackingMode: MapUserTrackingMode = .follow
+    
     var pins: FetchedResults<Pin>
     
     var body: some View {
@@ -60,6 +65,6 @@ struct MapView_Previews: PreviewProvider {
         static var pins: FetchedResults<Pin>
     
     static var previews: some View {
-        MapView(coordinate: CLLocationCoordinate2D(latitude: 44.015337, longitude: -73.16734), pins: pins)
+        MapView(pins: pins)
     }
 }

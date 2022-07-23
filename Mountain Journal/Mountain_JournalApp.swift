@@ -11,7 +11,7 @@ import MapKit
 @main
 struct Mountain_JournalApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
             MainView()

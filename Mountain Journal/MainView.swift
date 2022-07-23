@@ -20,7 +20,7 @@ struct MainView: View {
     
     var body: some View {
         TabView(selection: $selectedItem){
-            MapView(coordinate: CLLocationCoordinate2D(latitude: 44.015337, longitude: -73.16734), pins: pins)
+            MapView(pins: pins)
                 .tabItem {
                     Label("Map", systemImage: "map")
                     Text("Map")
@@ -52,6 +52,7 @@ struct MainView: View {
                     Text("My Notes")
                 }.tag(5)
         }
+        
         .sheet(isPresented: $isPresenting, onDismiss: {
                         self.selectedItem = 1
                     }) {
@@ -67,6 +68,7 @@ struct MainView: View {
                         }
                 }
     }
+    
 }
 
 struct MainView_Previews: PreviewProvider {

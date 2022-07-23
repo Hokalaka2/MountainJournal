@@ -3,18 +3,22 @@
     <entity name="Note" representedClassName="Note" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="has_one_pin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pin" inverseName="has_many_notes" inverseEntity="Pin"/>
     </entity>
     <entity name="Pin" representedClassName="Pin" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="has_many_notes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="has_one_pin" inverseEntity="Note"/>
     </entity>
     <elements>
-        <element name="Note" positionX="-45" positionY="27" width="128" height="104"/>
-        <element name="Pin" positionX="-45" positionY="0" width="128" height="89"/>
+        <element name="Note" positionX="-45" positionY="27" width="128" height="149"/>
+        <element name="Pin" positionX="-45" positionY="0" width="128" height="104"/>
     </elements>
 </model>

@@ -13,6 +13,7 @@ struct AddNewJournal: View {
     @State private var author = ""
     @State private var title = ""
     @State private var text = ""
+    @ObservedObject var locationManager = LocationManager()
     
     var body: some View {
         Form{
@@ -38,6 +39,8 @@ struct AddNewJournal: View {
                         note.author = self.author
                         note.title = self.title
                         note.text = self.text
+                        note.latitude = locationManager.lastLocation?.coordinate.latitude ?? 0.0
+                        note.longitude = locationManager.lastLocation?.coordinate.longitude ?? 0.0
                         isPresenting = false
                         do {
                             try viewContext.save()
