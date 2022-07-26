@@ -104,12 +104,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		957204262889AF1300E1911D /* Models */ = {
+		957204262889AF1300E1911D /* Test Help */ = {
 			isa = PBXGroup;
 			children = (
 				957204242889ABDB00E1911D /* JournalEntry.swift */,
 			);
-			path = Models;
+			path = "Test Help";
+			sourceTree = "<group>";
+		};
+		957204292890691A00E1911D /* ViewYourJournals */ = {
+			isa = PBXGroup;
+			children = (
+				9572041E2880711300E1911D /* ViewAllJournals.swift */,
+				95720420288073B000E1911D /* ViewIndividualJournal.swift */,
+				95720427288DE09900E1911D /* ExpandedJournalView.swift */,
+				957204222886119C00E1911D /* ViewJournalButton.swift */,
+			);
+			path = ViewYourJournals;
 			sourceTree = "<group>";
 		};
 		D08B85D52870C74C00C85152 = {
@@ -143,13 +154,13 @@
 				D0DC1EF2288C74E80061AAE6 /* LocationManager.swift */,
 				D0989F07287737E30050B0C0 /* ProfileView.swift */,
 				D0A98C1F2885AFDE001DDC11 /* AddNewJournal.swift */,
-				9572041E2880711300E1911D /* ViewAllJournals.swift */,
 				D0989F02287732330050B0C0 /* MapView.swift */,
-				957204262889AF1300E1911D /* Models */,
+				957204292890691A00E1911D /* ViewYourJournals */,
 				D0989F04287732750050B0C0 /* Helpers */,
 				D08B85E52870C75000C85152 /* Assets.xcassets */,
 				D0969649287DD01100EB03D3 /* Mountain_Journal.xcdatamodeld */,
 				D08B85EA2870C75000C85152 /* Persistence.swift */,
+				957204262889AF1300E1911D /* Test Help */,
 				D08B85E72870C75000C85152 /* Preview Content */,
 				D04C38AA289036D200BE6C29 /* Auth0.plist */,
 			);
@@ -186,8 +197,6 @@
 			children = (
 				D096960A287C96FF00EB03D3 /* SeeJournal.swift */,
 				D0989F0F2878AA4F0050B0C0 /* ProfileImageView.swift */,
-				95720420288073B000E1911D /* ViewIndividualJournal.swift */,
-				957204222886119C00E1911D /* ViewJournalButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -340,6 +349,7 @@
 				D096960B287C96FF00EB03D3 /* SeeJournal.swift in Sources */,
 				D0989F03287732330050B0C0 /* MapView.swift in Sources */,
 				D096964B287DD01200EB03D3 /* Mountain_Journal.xcdatamodeld in Sources */,
+				95720428288DE09900E1911D /* ExpandedJournalView.swift in Sources */,
 				D0989F08287737E30050B0C0 /* ProfileView.swift in Sources */,
 				D08B85E22870C74C00C85152 /* Mountain_JournalApp.swift in Sources */,
 				957204232886119C00E1911D /* ViewJournalButton.swift in Sources */,

@@ -29,12 +29,14 @@ struct ViewAllJournals: View {
                     }
                 }
                 .padding()
-                .navigationBarTitle("")
-                .navigationBarHidden(true)
             }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
         .foregroundColor(.black)
+        
     }
+        
 }
 
 struct ViewAllJournals_Previews: PreviewProvider {
