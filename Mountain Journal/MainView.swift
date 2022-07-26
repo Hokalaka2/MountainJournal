@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Auth0
 import MapKit
 import CoreData
 
@@ -17,6 +18,8 @@ struct MainView: View {
     
     @State private var isPresenting = false
     @State private var selectedItem = 1
+    
+    @State private var isAuthenticated = false
     
     var body: some View {
         TabView(selection: $selectedItem){
@@ -69,6 +72,42 @@ struct MainView: View {
                 }
     }
     
+}
+
+extension MainView {
+  
+    func login() {
+        Auth0 // 1
+          .webAuth() // 2
+          .start { result in // 3
+            switch result {
+              // 4
+              case .failure(let error):
+                print("Failed with: \(error)")
+              // 5
+              case .success(let credentials):
+                self.isAuthenticated = true
+                print("Credentials: \(credentials)")
+                print("ID token: \(credentials.idToken)")
+            }
+          }
+      }
+  
+    func logout() {
+        Auth0 // 1
+          .webAuth() // 2
+          .clearSession { result in // 3
+            switch result {
+              // 4
+              case .failure(let error):
+                print("Failed with: \(error)")
+                // 5
+              case .success:
+                self.isAuthenticated = false
+            }
+          }
+      }
+  
 }
 
 struct MainView_Previews: PreviewProvider {
