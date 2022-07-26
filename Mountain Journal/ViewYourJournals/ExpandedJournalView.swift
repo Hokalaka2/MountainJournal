@@ -11,19 +11,41 @@ struct ExpandedJournalView: View {
     
     let entry: Note
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    var btnBack : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+        }) {
+            Label("", systemImage: "arrow.left")
+                .padding(.leading)
+                .foregroundColor(.black)
+        }
+    }
+    
     var body: some View {
-        
         VStack {
-            ScrollView {
-                
+            HStack {
+                btnBack
+                Spacer()
                 Text(entry.title ?? "No title")
-                    .font(.subheadline)
-                Text("by \(entry.author ?? "No Author")")
-                    .font(.subheadline)
-                    .fontWeight(.thin)
-                    .foregroundColor(.gray)
+                    .font(.title)
+                    .fontWeight(.light)
+                    .padding(.trailing, 35.0)
+                Spacer()
                 
             }
+            .navigationBarBackButtonHidden(true)
+            
+            Rectangle()
+                .fill(.gray)
+                .frame(width: 350, height:1, alignment: .center)
+            
+            ScrollView {
+                Text("\(entry.text ?? "No body")")
+                    .font(.body)
+                    .frame(width: 350)
+            }
+                
             Rectangle()
                 .fill(.gray)
                 .frame(width: 350, height:1, alignment: .center)
@@ -45,6 +67,7 @@ struct ExpandedJournalView: View {
                     .padding(.top, 10.0)
             }
         }
+        .navigationBarHidden(true)
     }
 }
 

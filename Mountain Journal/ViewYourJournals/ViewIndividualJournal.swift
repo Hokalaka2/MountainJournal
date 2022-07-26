@@ -28,8 +28,9 @@ struct ViewIndividualJournal: View {
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
                 VStack (alignment:.leading) {
-                    NavigationLink(destination: MainView()){
-                        ViewJournalButton()
+                    NavigationLink(destination: ExpandedJournalView(entry: entry)){
+                        Label("View Journal", systemImage: "arrow.right")
+                            .padding(.bottom, 10)
                     }
                     Label("Save", systemImage: "archivebox")
                 }
