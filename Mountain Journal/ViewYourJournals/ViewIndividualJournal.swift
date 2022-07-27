@@ -27,13 +27,13 @@ struct ViewIndividualJournal: View {
                     .frame(width: 240, height: 50, alignment: .topLeading)
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
-//                VStack (alignment:.leading) {
-//                    NavigationLink(destination: ExpandedJournalView(entry: entry)){
-//                        Label("View Journal", systemImage: "arrow.right")
-//                            .padding(.bottom, 10)
-//                    }
-//                    Label("Save", systemImage: "archivebox")
-//                }
+                VStack (alignment:.leading) {
+                    NavigationLink(destination: ExpandedJournalView(entry: entry)){
+                        Label("View Journal", systemImage: "arrow.right")
+                            .padding(.bottom, 10)
+                    }
+                    Label("Save", systemImage: "archivebox")
+                }
                 .padding(.trailing,15)
             }
             .font(.caption)
