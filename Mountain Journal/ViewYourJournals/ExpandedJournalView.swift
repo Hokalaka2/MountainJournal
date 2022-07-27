@@ -43,7 +43,7 @@ struct ExpandedJournalView: View {
             ScrollView {
                 Text("\(entry.text ?? "No body")")
                     .font(.body)
-                    .frame(width: 350)
+                    .frame(width: 350, alignment: .center)
             }
                 
             Rectangle()
@@ -55,16 +55,15 @@ struct ExpandedJournalView: View {
                     .font(.subheadline)
                     .fontWeight(.thin)
                     .foregroundColor(.gray)
-                    
                     .padding( .leading, 25.0)
-                    .padding(.top, 10.0)
+                    .padding([.top, .bottom], 15.0)
                 Spacer()
-                Text("\(entry.timestamp ?? Date())")
+                Text("\(entry.timestamp ?? Date(),style:.date)")
                     .font(.subheadline)
                     .fontWeight(.thin)
                     .foregroundColor(.gray)
                     .padding(.trailing, 25.0)
-                    .padding(.top, 10.0)
+                    .padding([.top, .bottom], 15.0)
             }
         }
         .navigationBarHidden(true)
