@@ -10,10 +10,10 @@ import MapKit
 
 struct MapView: View {
     @StateObject var locationManager = LocationManager()
-    
+    var pins: FetchedResults<Pin>
     var coordinate: CLLocationCoordinate2D { return locationManager.lastLocation?.coordinate ?? CLLocationCoordinate2D(latitude: 38.5733, longitude: -109.5498)
     }
-    var pins: FetchedResults<Pin>
+    
     
     @State private var region = MKCoordinateRegion()
     @State private var userTrackingMode: MapUserTrackingMode = .follow
@@ -30,9 +30,6 @@ struct MapView: View {
                 MapMarker(coordinate: CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude))
                 
             }
-                .onAppear {
-                    setRegion(coordinate)
-                }
                 .ignoresSafeArea(edges: .top)
             
             //if User is in close enough area
@@ -50,8 +47,11 @@ struct MapView: View {
                 }
             }
         }
+        .onAppear {
+            setRegion(coordinate)
+        }
     }
-    
+        
     private func setRegion(_ coordinate: CLLocationCoordinate2D){
         region = MKCoordinateRegion(
             center: coordinate,

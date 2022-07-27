@@ -23,46 +23,9 @@ struct Mountain_JournalApp: App {
             MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         } else {
-            Button("Login"){
-                login()
-            }
+            LogInView(isAuthenticated: $isAuthenticated, userProfile: $userProfile)
         }
         }
     }
-}
-extension Mountain_JournalApp {
-  
-    func login() {
-        Auth0 // 1
-          .webAuth() // 2
-          .start { result in // 3
-            switch result {
-              // 4
-              case .failure(let error):
-                print("Failed with: \(error)")
-              // 5
-              case .success(let credentials):
-                self.isAuthenticated = true
-                self.userProfile = Profile.from(credentials.idToken)
-                print("Credentials: \(credentials)")
-                print("ID token: \(credentials.idToken)")
-            }
-          }
-      }
-  
-    func logout() {
-        Auth0 // 1
-          .webAuth() // 2
-          .clearSession { result in // 3
-            switch result {
-              // 4
-              case .failure(let error):
-                print("Failed with: \(error)")
-                // 5
-              case .success:
-                self.isAuthenticated = false
-            }
-          }
-      }
 }
 

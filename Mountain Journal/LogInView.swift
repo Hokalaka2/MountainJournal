@@ -9,30 +9,37 @@ import SwiftUI
 import Auth0
 
 struct LogInView: View {
-    @State private var isAuthenticated = false
-    @State var userProfile = Profile.empty
+    @Binding var isAuthenticated: Bool
+    @Binding var userProfile: Profile
     
     var body: some View {
         if isAuthenticated {
             MainView()
         } else {
-            HStack{
-                Spacer()
-                VStack{
-                    Text("Hi! In order to gain the full experience of our app. Please Authenticate Before Using Mountain Journal")
-                        .multilineTextAlignment(.center)
-                    Button("Login"){
-                        login()
+            ZStack{
+                Image("Tree")
+                    .resizable()
+                    .ignoresSafeArea()
+                HStack{
+                    Spacer()
+                    VStack{
+                        Text("Hi! In order to gain the full experience of our app. Please Authenticate Before Using Mountain Journal")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+                        Button("Login"){
+                            login()
+                        }
+                        .padding()
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(16)
                     }
-                    .padding()
-                    .background(.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(16)
+                    Spacer()
                 }
-                Spacer()
+                .padding()
+                .background(Color.gray.opacity(0.80))
             }
-            .padding()
-            .background(.green)
         }
     }
 }
@@ -75,7 +82,9 @@ extension LogInView {
 
 
 struct LogInView_Previews: PreviewProvider {
+    @State static var isAuthenticated = false
+    @State static var userProfile = Profile.empty
     static var previews: some View {
-        LogInView()
+        LogInView(isAuthenticated: $isAuthenticated, userProfile: $userProfile)
     }
 }
