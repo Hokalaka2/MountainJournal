@@ -13,11 +13,11 @@ struct MapView: View {
     
     var coordinate: CLLocationCoordinate2D { return locationManager.lastLocation?.coordinate ?? CLLocationCoordinate2D(latitude: 38.5733, longitude: -109.5498)
     }
+    var pins: FetchedResults<Pin>
     
     @State private var region = MKCoordinateRegion()
     @State private var userTrackingMode: MapUserTrackingMode = .follow
     
-    var pins: FetchedResults<Pin>
     
     var body: some View {
         ZStack{

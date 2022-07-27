@@ -16,9 +16,23 @@ struct LogInView: View {
         if isAuthenticated {
             MainView()
         } else {
-            Button("Login"){
-                login()
+            HStack{
+                Spacer()
+                VStack{
+                    Text("Hi! In order to gain the full experience of our app. Please Authenticate Before Using Mountain Journal")
+                        .multilineTextAlignment(.center)
+                    Button("Login"){
+                        login()
+                    }
+                    .padding()
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(16)
+                }
+                Spacer()
             }
+            .padding()
+            .background(.green)
         }
     }
 }
