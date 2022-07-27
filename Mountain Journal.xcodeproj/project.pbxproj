@@ -13,6 +13,8 @@
 		957204252889ABDB00E1911D /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957204242889ABDB00E1911D /* JournalEntry.swift */; };
 		D04C38A92890369800BE6C29 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = D04C38A82890369800BE6C29 /* Auth0 */; };
 		D04C38AB289036D200BE6C29 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = D04C38AA289036D200BE6C29 /* Auth0.plist */; };
+		D04C38AD2890B00B00BE6C29 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04C38AC2890B00B00BE6C29 /* Profile.swift */; };
+		D04C38AF2890B17100BE6C29 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04C38AE2890B17100BE6C29 /* LogInView.swift */; };
 		D08B85E22870C74C00C85152 /* Mountain_JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B85E12870C74C00C85152 /* Mountain_JournalApp.swift */; };
 		D08B85E62870C75000C85152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08B85E52870C75000C85152 /* Assets.xcassets */; };
 		D08B85E92870C75000C85152 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08B85E82870C75000C85152 /* Preview Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		957204222886119C00E1911D /* ViewJournalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewJournalButton.swift; sourceTree = "<group>"; };
 		957204242889ABDB00E1911D /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		D04C38AA289036D200BE6C29 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		D04C38AC2890B00B00BE6C29 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		D04C38AE2890B17100BE6C29 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		D08B85DE2870C74C00C85152 /* Mountain Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mountain Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08B85E12870C74C00C85152 /* Mountain_JournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mountain_JournalApp.swift; sourceTree = "<group>"; };
 		D08B85E52870C75000C85152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,7 +121,6 @@
 			children = (
 				9572041E2880711300E1911D /* ViewAllJournals.swift */,
 				95720420288073B000E1911D /* ViewIndividualJournal.swift */,
-				95720427288DE09900E1911D /* ExpandedJournalView.swift */,
 				957204222886119C00E1911D /* ViewJournalButton.swift */,
 			);
 			path = ViewYourJournals;
@@ -151,6 +154,8 @@
 				D0DC1EF0288C59160061AAE6 /* PinCoreData.swift */,
 				D0989F0D2878A8500050B0C0 /* NotesView.swift */,
 				D0989F0B2877560E0050B0C0 /* MainView.swift */,
+				D04C38AE2890B17100BE6C29 /* LogInView.swift */,
+				D04C38AC2890B00B00BE6C29 /* Profile.swift */,
 				D0DC1EF2288C74E80061AAE6 /* LocationManager.swift */,
 				D0989F07287737E30050B0C0 /* ProfileView.swift */,
 				D0A98C1F2885AFDE001DDC11 /* AddNewJournal.swift */,
@@ -158,11 +163,11 @@
 				957204292890691A00E1911D /* ViewYourJournals */,
 				D0989F04287732750050B0C0 /* Helpers */,
 				D08B85E52870C75000C85152 /* Assets.xcassets */,
+				D04C38AA289036D200BE6C29 /* Auth0.plist */,
 				D0969649287DD01100EB03D3 /* Mountain_Journal.xcdatamodeld */,
 				D08B85EA2870C75000C85152 /* Persistence.swift */,
 				957204262889AF1300E1911D /* Test Help */,
 				D08B85E72870C75000C85152 /* Preview Content */,
-				D04C38AA289036D200BE6C29 /* Auth0.plist */,
 			);
 			path = "Mountain Journal";
 			sourceTree = "<group>";
@@ -338,18 +343,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04C38AD2890B00B00BE6C29 /* Profile.swift in Sources */,
 				D0A98C202885AFDE001DDC11 /* AddNewJournal.swift in Sources */,
 				9572041F2880711300E1911D /* ViewAllJournals.swift in Sources */,
 				D0989F102878AA4F0050B0C0 /* ProfileImageView.swift in Sources */,
 				D0989F0E2878A8500050B0C0 /* NotesView.swift in Sources */,
 				D0DC1EF3288C74EA0061AAE6 /* LocationManager.swift in Sources */,
+				D04C38AF2890B17100BE6C29 /* LogInView.swift in Sources */,
 				D08B85EB2870C75000C85152 /* Persistence.swift in Sources */,
 				D0989F0C2877560E0050B0C0 /* MainView.swift in Sources */,
 				D0DC1EF1288C59160061AAE6 /* PinCoreData.swift in Sources */,
 				D096960B287C96FF00EB03D3 /* SeeJournal.swift in Sources */,
 				D0989F03287732330050B0C0 /* MapView.swift in Sources */,
 				D096964B287DD01200EB03D3 /* Mountain_Journal.xcdatamodeld in Sources */,
-				95720428288DE09900E1911D /* ExpandedJournalView.swift in Sources */,
 				D0989F08287737E30050B0C0 /* ProfileView.swift in Sources */,
 				D08B85E22870C74C00C85152 /* Mountain_JournalApp.swift in Sources */,
 				957204232886119C00E1911D /* ViewJournalButton.swift in Sources */,

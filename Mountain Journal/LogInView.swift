@@ -1,36 +1,29 @@
 //
-//  Mountain_JournalApp.swift
+//  LogInView.swift
 //  Mountain Journal
 //
-//  Created by Otis Milliken on 7/2/22.
+//  Created by Otis Milliken on 7/26/22.
 //
 
 import SwiftUI
 import Auth0
-import MapKit
 
-@main
-struct Mountain_JournalApp: App {
-    let persistenceController = PersistenceController.shared
+struct LogInView: View {
     @State private var isAuthenticated = false
     @State var userProfile = Profile.empty
     
-    var body: some Scene {
-        WindowGroup {
-//            MainView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+    var body: some View {
         if isAuthenticated {
             MainView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         } else {
             Button("Login"){
                 login()
             }
         }
-        }
     }
 }
-extension Mountain_JournalApp {
+
+extension LogInView {
   
     func login() {
         Auth0 // 1
@@ -66,3 +59,9 @@ extension Mountain_JournalApp {
       }
 }
 
+
+struct LogInView_Previews: PreviewProvider {
+    static var previews: some View {
+        LogInView()
+    }
+}

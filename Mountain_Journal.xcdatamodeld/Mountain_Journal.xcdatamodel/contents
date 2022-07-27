@@ -21,11 +21,10 @@
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="picture" optional="YES"/>
     </entity>
     <elements>
         <element name="Note" positionX="-45" positionY="27" width="128" height="149"/>
         <element name="Pin" positionX="-45" positionY="0" width="128" height="104"/>
-        <element name="User" positionX="-36" positionY="81" width="128" height="89"/>
+        <element name="User" positionX="-36" positionY="81" width="128" height="74"/>
     </elements>
 </model>

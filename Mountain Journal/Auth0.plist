@@ -4,7 +4,7 @@
 <dict>
 	<key>Domain</key>
 	<string>dev-dbtttmqy.us.auth0.com</string>
-	<key>ClientID</key>
+	<key>ClientId</key>
 	<string>GVLpbRN5R984yVg0mAUmyGPZ5E1EEgqo</string>
 </dict>
 </plist>
