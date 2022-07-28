@@ -17,10 +17,8 @@ struct Mountain_JournalApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            MainView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         if isAuthenticated {
-            MainView()
+            MainView(userProfile: $userProfile)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         } else {
             LogInView(isAuthenticated: $isAuthenticated, userProfile: $userProfile)

@@ -8,25 +8,27 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @Binding var userProfile: Profile
+    
     var body: some View {
         VStack{
             HStack{
                 ProfileImageView(image: Image("Otis_Cat"))
                     .padding()
                 VStack{
-                    Text("Hokalaka")
-                    Text("email@gmail.com")
+                    Text("\(userProfile.name)")
+                    Text("\(userProfile.email)")
                 }
             }
             NavigationView{
                 List{
-                    NavigationLink(destination: MainView()){
+                    NavigationLink(destination: ViewAllJournals(userProfile: userProfile)){
                         Text("My Journals")
                     }
-                    NavigationLink(destination: MainView()){
+                    NavigationLink(destination: ViewAllJournals(userProfile: userProfile)){
                         Text("My Locations")
                     }
-                    NavigationLink(destination: MainView()){
+                    NavigationLink(destination: ViewAllJournals(userProfile: userProfile)){
                         Text("Saved Journals")
                     }
 
@@ -43,7 +45,8 @@ struct ProfileView: View {
 }
 
 struct ProfileView_Previews: PreviewProvider {
+    @State static var userProfile = Profile.empty
     static var previews: some View {
-        ProfileView()
+        ProfileView(userProfile: $userProfile)
     }
 }

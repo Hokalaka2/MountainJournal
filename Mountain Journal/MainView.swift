@@ -13,7 +13,9 @@ struct MainView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(entity: Pin.entity(), sortDescriptors: [])
-        var pins: FetchedResults<Pin>
+    var pins: FetchedResults<Pin>
+    
+    @Binding var userProfile: Profile
     
     @State private var isPresenting = false
     @State private var selectedItem = 1
@@ -25,7 +27,7 @@ struct MainView: View {
                     Label("Map", systemImage: "map")
                     Text("Map")
                 }.tag(1)
-            ProfileView()
+            ProfileView(userProfile: $userProfile)
                 .tabItem{
                     Label("Profile", systemImage: "person")
                     Text("Notes")
@@ -40,13 +42,13 @@ struct MainView: View {
                     self.isPresenting = true
                 }
             
-            ViewAllJournals()
+            ViewAllJournals(userProfile: userProfile)
                 .tabItem{
                     Label("Location", systemImage: "pin")
                     Text("Location")
                 }.tag(4)
             
-            ViewAllJournals()
+            ViewAllJournals(userProfile: userProfile)
                 .tabItem{
                     Label("My Notes", systemImage: "note.text")
                     Text("My Notes")
@@ -57,7 +59,7 @@ struct MainView: View {
                         self.selectedItem = 1
                     }) {
                         NavigationView {
-                            AddNewJournal(isPresenting: $isPresenting)
+                            AddNewJournal(isPresenting: $isPresenting, userProfile: userProfile)
                                 .toolbar{
                                     ToolbarItem(placement: .cancellationAction){
                                         Button("Dismiss"){
@@ -71,7 +73,8 @@ struct MainView: View {
 }
 
 struct MainView_Previews: PreviewProvider {
+    @State static var userProfile = Profile.empty
     static var previews: some View {
-        MainView()
+        MainView(userProfile: $userProfile)
     }
 }

@@ -13,33 +13,30 @@ struct LogInView: View {
     @Binding var userProfile: Profile
     
     var body: some View {
-        if isAuthenticated {
-            MainView()
-        } else {
-            ZStack{
-                Image("Tree")
-                    .resizable()
-                    .ignoresSafeArea()
-                HStack{
-                    Spacer()
-                    VStack{
-                        Text("Hi! In order to gain the full experience of our app. Please Authenticate Before Using Mountain Journal")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                        Button("Login"){
-                            login()
-                        }
-                        .padding()
-                        .background(.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(16)
+        ZStack{
+            Image("Tree")
+                .resizable()
+                .ignoresSafeArea()
+                .opacity(0.78)
+            HStack{
+                Spacer()
+                VStack{
+                    Text("Hi! In order to gain the full experience of our app. Please Authenticate Before Using Mountain Journal")
+                        .font(.headline)
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.center)
+                    Button("Log In"){
+                        login()
                     }
-                    Spacer()
+                    .padding()
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(16)
                 }
-                .padding()
-                .background(Color.gray.opacity(0.80))
+                Spacer()
             }
+            .padding()
+            .background(Color.white.opacity(0.80))
         }
     }
 }

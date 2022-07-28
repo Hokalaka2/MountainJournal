@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ViewAllJournals: View {
+    var userProfile: Profile
     
+    @FetchRequest var entries: FetchedResults<Note>
     @Environment(\.managedObjectContext) private var viewContext
     
-    @FetchRequest(
-            sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: false)],
-            animation: .default)
-    private var entries: FetchedResults<Note>
+    init(userProfile: Profile){
+        self.userProfile = userProfile
+        
+        let predicate = NSPredicate(format: "author == %@", self.userProfile.name)
+        
+        self._entries = FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: false)], predicate: predicate)
+    }
     
     var body: some View {
         NavigationView {
@@ -40,8 +45,8 @@ struct ViewAllJournals: View {
 }
 
 struct ViewAllJournals_Previews: PreviewProvider {
-    
+    @State static var userProfile = Profile.empty
     static var previews: some View {
-        ViewAllJournals()
+        ViewAllJournals(userProfile: userProfile)
     }
 }

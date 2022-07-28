@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddNewJournal: View {
     @Binding var isPresenting: Bool
+    var userProfile: Profile
     @Environment(\.managedObjectContext) private var viewContext
     @State private var author = ""
     @State private var title = ""
@@ -18,7 +19,8 @@ struct AddNewJournal: View {
     var body: some View {
         Form{
             Section(header: Text("Author")){
-                TextField("Author", text:$author)
+                TextField("\(userProfile.name)", text:$author)
+                    .disabled(true)
             }
             Section(header: Text("Title")){
                 TextField("Title", text: $title)
@@ -36,7 +38,7 @@ struct AddNewJournal: View {
                         let note = Note(context: viewContext)
                         note.id = UUID()
                         note.timestamp = Date()
-                        note.author = self.author
+                        note.author = userProfile.name
                         note.title = self.title
                         note.text = self.text
                         note.latitude = locationManager.lastLocation?.coordinate.latitude ?? 0.0
@@ -55,7 +57,7 @@ struct AddNewJournal: View {
                 }) {
                     Text("Publish")
                 }
-                .disabled(author.isEmpty || text.isEmpty)
+                .disabled(title.isEmpty || text.isEmpty)
             }
         }
             
@@ -65,7 +67,8 @@ struct AddNewJournal: View {
 
 struct AddNewJournal_Previews: PreviewProvider {
     @State static var isPresenting = true
+    @State static var userProfile = Profile.empty
     static var previews: some View {
-        AddNewJournal(isPresenting: $isPresenting)
+        AddNewJournal(isPresenting: $isPresenting, userProfile: userProfile)
     }
 }
