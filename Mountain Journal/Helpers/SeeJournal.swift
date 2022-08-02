@@ -17,7 +17,10 @@ struct SeeJournal: View {
     
     init(coordinate: CLLocationCoordinate2D){
         self.coordinate = coordinate
-        self._entries = FetchRequest(entity: Note.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: false)], predicate: NSPredicate(format: "latitude == @%", coordinate.latitude))
+        
+        let predicate = NSPredicate(format: "latitude == %@", "\(self.coordinate.latitude)")
+        
+        self._entries = FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: false)], predicate: predicate)
     }
     
     var body: some View {
