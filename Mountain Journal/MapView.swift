@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
+    
     @StateObject var locationManager = LocationManager()
     var pins: FetchedResults<Pin>
     var coordinate: CLLocationCoordinate2D { return locationManager.lastLocation?.coordinate ?? CLLocationCoordinate2D(latitude: 38.5733, longitude: -109.5498)
@@ -38,7 +39,7 @@ struct MapView: View {
                 HStack{
                     Spacer()
                     Button(action: {}){
-                        SeeJournal()
+                        SeeJournal(coordinate: coordinate)
                             .frame(width:100,height:100)
                             .cornerRadius(14)
                     }

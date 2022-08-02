@@ -6,8 +6,20 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct SeeJournal: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest var entries: FetchedResults<Note>
+    
+    var coordinate: CLLocationCoordinate2D
+    
+    init(coordinate: CLLocationCoordinate2D){
+        self.coordinate = coordinate
+        self._entries = FetchRequest(entity: Note.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Note.timestamp, ascending: false)], predicate: NSPredicate(format: "latitude == @%", coordinate.latitude))
+    }
+    
     var body: some View {
         VStack{
             Image(systemName: "note.text")
@@ -24,8 +36,9 @@ struct SeeJournal: View {
 }
 
 struct SeeJournal_Previews: PreviewProvider {
+    static var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 38.5733, longitude: -109.5498)
     static var previews: some View {
-        SeeJournal()
+        SeeJournal(coordinate: coordinate)
             .previewLayout(.sizeThatFits)
     }
 }
