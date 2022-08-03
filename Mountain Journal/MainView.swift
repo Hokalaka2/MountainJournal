@@ -54,7 +54,6 @@ struct MainView: View {
                     Text("My Notes")
                 }.tag(5)
         }
-        
         .sheet(isPresented: $isPresenting, onDismiss: {
                         self.selectedItem = 1
                     }) {

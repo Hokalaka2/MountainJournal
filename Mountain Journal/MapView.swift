@@ -15,6 +15,7 @@ struct MapView: View {
     var coordinate: CLLocationCoordinate2D { return locationManager.lastLocation?.coordinate ?? CLLocationCoordinate2D(latitude: 38.5733, longitude: -109.5498)
     }
     
+    @State private var seeJournal = false
     
     @State private var region = MKCoordinateRegion()
     @State private var userTrackingMode: MapUserTrackingMode = .follow
@@ -38,14 +39,28 @@ struct MapView: View {
                 Spacer()
                 HStack{
                     Spacer()
-                    Button(action: {}){
-                        SeeJournal(coordinate: coordinate)
+                    Button(action: {
+                        seeJournal = true
+                    }){
+                        SeeJournal()
                             .frame(width:100,height:100)
                             .cornerRadius(14)
                     }
                     .padding()
                     .padding(.bottom, 38.0)
                 }
+            }
+        }
+        .sheet(isPresented: $seeJournal){
+            NavigationView{
+                LocationJournalView(coordinate: coordinate)
+                    .toolbar{
+                        ToolbarItem(placement: .cancellationAction){
+                            Button("Close"){
+                                seeJournal = false
+                            }
+                        }
+                    }
             }
         }
         .onAppear {

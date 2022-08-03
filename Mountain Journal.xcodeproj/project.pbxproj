@@ -33,6 +33,7 @@
 		D0A98C202885AFDE001DDC11 /* AddNewJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A98C1F2885AFDE001DDC11 /* AddNewJournal.swift */; };
 		D0DC1EF1288C59160061AAE6 /* PinCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC1EF0288C59160061AAE6 /* PinCoreData.swift */; };
 		D0DC1EF3288C74EA0061AAE6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC1EF2288C74E80061AAE6 /* LocationManager.swift */; };
+		D0FE7E2D2899A7490078EB5A /* LocationJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE7E2C2899A7490078EB5A /* LocationJournalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		D0A98C1F2885AFDE001DDC11 /* AddNewJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewJournal.swift; sourceTree = "<group>"; };
 		D0DC1EF0288C59160061AAE6 /* PinCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCoreData.swift; sourceTree = "<group>"; };
 		D0DC1EF2288C74E80061AAE6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D0FE7E2C2899A7490078EB5A /* LocationJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationJournalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				D096960A287C96FF00EB03D3 /* SeeJournal.swift */,
+				D0FE7E2C2899A7490078EB5A /* LocationJournalView.swift */,
 				D0989F0F2878AA4F0050B0C0 /* ProfileImageView.swift */,
 			);
 			path = Helpers;
@@ -353,6 +356,7 @@
 				D0989F0E2878A8500050B0C0 /* NotesView.swift in Sources */,
 				D0DC1EF3288C74EA0061AAE6 /* LocationManager.swift in Sources */,
 				D08B85EB2870C75000C85152 /* Persistence.swift in Sources */,
+				D0FE7E2D2899A7490078EB5A /* LocationJournalView.swift in Sources */,
 				D04C38B12890B89100BE6C29 /* ExpandedJournalView.swift in Sources */,
 				D0989F0C2877560E0050B0C0 /* MainView.swift in Sources */,
 				D0DC1EF1288C59160061AAE6 /* PinCoreData.swift in Sources */,
