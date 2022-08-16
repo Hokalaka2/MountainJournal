@@ -32,7 +32,15 @@ struct ViewIndividualJournal: View {
                         Label("View Journal", systemImage: "arrow.right")
                             .padding(.bottom, 10)
                     }
-                    Label("Save", systemImage: "archivebox")
+                    Button(action: {
+                        withAnimation {
+                            
+                        }
+                    }) {
+                        Label("Save", systemImage: "archivebox")
+                            .foregroundColor(.black)
+                    }
+                    
                 }
                 .padding(.trailing,15)
             }
