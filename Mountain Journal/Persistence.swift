@@ -27,6 +27,13 @@ struct PersistenceController {
             newItem.latitude = 44.015337
             newItem.longitude = -73.16734
             
+            let newSavedNote = SavedNote(context: viewContext)
+            newNote.id = UUID()
+            newNote.author = "Otis"
+            newNote.text = "YO, this is otis and this is my first entry into the notes"
+            newNote.timestamp = Date()
+            newNote.title = "Mountaintin"
+            
         }
         do {
             try viewContext.save()

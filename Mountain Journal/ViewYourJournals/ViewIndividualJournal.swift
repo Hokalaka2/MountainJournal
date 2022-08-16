@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ViewIndividualJournal: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    
     let entry: Note
     
     var body: some View {
@@ -34,6 +37,14 @@ struct ViewIndividualJournal: View {
                     }
                     Button(action: {
                         withAnimation {
+                            let SNote = SavedNote(context: viewContext)
+                            SNote.id = entry.id
+                            SNote.timestamp = entry.timestamp
+                            SNote.author = entry.author
+                            SNote.title = entry.title
+                            SNote.text = entry.text
+                            SNote.latitude = entry.latitude
+                            SNote.longitude = entry.longitude
                             
                         }
                     }) {
