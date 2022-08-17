@@ -11,6 +11,8 @@ struct ViewIndividualSavedJournal: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     
+    @State var buttonTapped = false
+    
     let entry: SavedNote
     
     var body: some View {
@@ -37,19 +39,18 @@ struct ViewIndividualSavedJournal: View {
                     }
                     Button(action: {
                         withAnimation {
-                            let SNote = SavedNote(context: viewContext)
-                            SNote.id = entry.id
-                            SNote.timestamp = entry.timestamp
-                            SNote.author = entry.author
-                            SNote.title = entry.title
-                            SNote.text = entry.text
-                            SNote.latitude = entry.latitude
-                            SNote.longitude = entry.longitude
-                            
+                            buttonTapped = true
+                            viewContext.delete(entry)
                         }
                     }) {
-                        Label("Save", systemImage: "archivebox")
-                            .foregroundColor(.black)
+                        if (buttonTapped == false) {
+                            Label("Unsave", systemImage: "archivebox")
+                                .foregroundColor(.black)
+                        }
+                        else {
+                            Label("Unsave", systemImage: "archivebox")
+                                .foregroundColor(.gray)
+                        }
                     }
                     
                 }

@@ -11,6 +11,8 @@ struct ViewIndividualJournal: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     
+    @State var buttonTapped = false
+    
     let entry: Note
     
     var body: some View {
@@ -46,11 +48,27 @@ struct ViewIndividualJournal: View {
                             SNote.latitude = entry.latitude
                             SNote.longitude = entry.longitude
                             
+                            self.buttonTapped.toggle()
+                            
+                            do {
+                                try viewContext.save()
+                                print("Saved")
+                            } catch {
+                                print(error.localizedDescription)
+                            }
                         }
                     }) {
-                        Label("Save", systemImage: "archivebox")
-                            .foregroundColor(.black)
+                        if (buttonTapped == false) {
+                            Label("Save", systemImage: "archivebox")
+                                .foregroundColor(.black)
+                        }
+                        else {
+                            Label("Save", systemImage: "archivebox")
+                                .foregroundColor(.gray)
+                        }
+                        
                     }
+                    .disabled(buttonTapped)
                     
                 }
                 .padding(.trailing,15)
