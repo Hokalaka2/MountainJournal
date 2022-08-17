@@ -28,7 +28,7 @@ struct ProfileView: View {
                     NavigationLink(destination: ViewAllJournals(userProfile: userProfile)){
                         Text("My Locations")
                     }
-                    NavigationLink(destination: ViewAllJournals(userProfile: userProfile)){
+                    NavigationLink(destination: ViewSavedJournals(userProfile: userProfile)){
                         Text("Saved Journals")
                     }
 
