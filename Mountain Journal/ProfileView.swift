@@ -23,9 +23,6 @@ struct ProfileView: View {
             NavigationView{
                 List{
                     NavigationLink(destination: ViewAllJournals(userProfile: userProfile)){
-                        Text("My Journals")
-                    }
-                    NavigationLink(destination: ViewAllJournals(userProfile: userProfile)){
                         Text("My Locations")
                     }
                     NavigationLink(destination: ViewSavedJournals(userProfile: userProfile)){
@@ -36,8 +33,6 @@ struct ProfileView: View {
                 .navigationTitle("Your Saved Info")
                 
             }
-            
-            
             Spacer()
         }
         .navigationBarTitle("Profile")

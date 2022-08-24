@@ -15,6 +15,8 @@ struct ViewIndividualJournal: View {
     
     let entry: Note
     
+    let screenSize = UIScreen.main.bounds.size
+    
     var body: some View {
         
         VStack(alignment: .leading) {
@@ -26,10 +28,13 @@ struct ViewIndividualJournal: View {
                     .fontWeight(.thin)
                     .foregroundColor(.gray)
             }
-                
+            let textWidth = screenSize.width * (0.6)
+            let textHeight = screenSize.height * 0.07
+            let rectWidth = screenSize.width * (0.9)
+            
             HStack(alignment: .bottom) {
                 Text(entry.text ?? "No Body")
-                    .frame(width: 240, height: 50, alignment: .topLeading)
+                    .frame(width: textWidth, height: textHeight, alignment: .topLeading)
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
                 VStack (alignment:.leading) {
@@ -77,7 +82,7 @@ struct ViewIndividualJournal: View {
             
             Rectangle()
                 .fill(.gray)
-                .frame(width: 350, height:1, alignment: .center)
+                .frame(width: rectWidth, height:1, alignment: .center)
             
         }
     }
