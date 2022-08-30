@@ -15,7 +15,13 @@ struct ViewIndividualSavedJournal: View {
     
     let entry: SavedNote
     
+    let screenSize = UIScreen.main.bounds.size
+    
     var body: some View {
+        
+        let textWidth = screenSize.width * (0.6)
+        let textHeight = screenSize.height * (0.07)
+        let rectWidth = screenSize.width * (0.9)
         
         VStack(alignment: .leading) {
             HStack {
@@ -29,7 +35,7 @@ struct ViewIndividualSavedJournal: View {
                 
             HStack(alignment: .bottom) {
                 Text(entry.text ?? "No Body")
-                    .frame(width: 240, height: 50, alignment: .topLeading)
+                    .frame(width: textWidth, height: textHeight, alignment: .topLeading)
                     .multilineTextAlignment(.leading)
                     .lineLimit(3)
                 VStack (alignment:.leading) {
@@ -52,7 +58,6 @@ struct ViewIndividualSavedJournal: View {
                                 .foregroundColor(.gray)
                         }
                     }
-                    
                 }
                 .padding(.trailing,15)
             }
@@ -60,8 +65,7 @@ struct ViewIndividualSavedJournal: View {
             
             Rectangle()
                 .fill(.gray)
-                .frame(width: 350, height:1, alignment: .center)
-            
+                .frame(width: rectWidth, height:1, alignment: .center)
         }
     }
 }

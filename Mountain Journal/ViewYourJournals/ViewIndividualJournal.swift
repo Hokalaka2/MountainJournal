@@ -19,6 +19,10 @@ struct ViewIndividualJournal: View {
     
     var body: some View {
         
+        let textWidth = screenSize.width * (0.6)
+        let textHeight = screenSize.height * 0.07
+        let rectWidth = screenSize.width * (0.9)
+        
         VStack(alignment: .leading) {
             HStack {
                 Text(entry.title ?? "No title")
@@ -28,9 +32,6 @@ struct ViewIndividualJournal: View {
                     .fontWeight(.thin)
                     .foregroundColor(.gray)
             }
-            let textWidth = screenSize.width * (0.6)
-            let textHeight = screenSize.height * 0.07
-            let rectWidth = screenSize.width * (0.9)
             
             HStack(alignment: .bottom) {
                 Text(entry.text ?? "No Body")

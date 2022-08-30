@@ -25,9 +25,8 @@ struct ViewSavedJournals: View {
         NavigationView {
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: 15) {
-                    Text("Journals")
+                    Text("Saved Journals")
                         .font(.headline)
-                        .padding(.leading)
                         
                     ForEach(saved) { isaved in
                         ViewIndividualSavedJournal(entry: isaved)

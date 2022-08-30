@@ -11,6 +11,10 @@ struct ExpandedJournalView: View {
     
     let entry: Note
     
+    let screenSize = UIScreen.main.bounds.size
+    
+    
+    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var btnBack : some View { Button(action: {
@@ -23,6 +27,9 @@ struct ExpandedJournalView: View {
     }
     
     var body: some View {
+        
+        let rectWidth = screenSize.width * (0.9)
+        
         VStack {
             HStack {
                 btnBack
@@ -38,17 +45,17 @@ struct ExpandedJournalView: View {
             
             Rectangle()
                 .fill(.gray)
-                .frame(width: 350, height:1, alignment: .center)
+                .frame(width: rectWidth, height:1, alignment: .center)
             
             ScrollView {
                 Text("\(entry.text ?? "No body")")
                     .font(.body)
-                    .frame(width: 350, alignment: .center)
+                    .frame(width: rectWidth, alignment: .center)
             }
                 
             Rectangle()
                 .fill(.gray)
-                .frame(width: 350, height:1, alignment: .center)
+                .frame(width: rectWidth, height:1, alignment: .center)
             
             HStack {
                 Text("\(entry.author ?? "No Author")")

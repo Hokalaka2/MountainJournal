@@ -25,9 +25,8 @@ struct ViewAllJournals: View {
         NavigationView {
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: 15) {
-                    Text("Journals")
+                    Text("Your Journals")
                         .font(.headline)
-                        .padding(.leading)
                         
                     ForEach(entries) { testEntry in
                         ViewIndividualJournal(entry: testEntry)
