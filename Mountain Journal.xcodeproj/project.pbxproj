@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9572041F2880711300E1911D /* ViewAllJournals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9572041E2880711300E1911D /* ViewAllJournals.swift */; };
 		95720421288073B000E1911D /* ViewIndividualJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95720420288073B000E1911D /* ViewIndividualJournal.swift */; };
-		957204232886119C00E1911D /* ViewJournalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957204222886119C00E1911D /* ViewJournalButton.swift */; };
 		957204252889ABDB00E1911D /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957204242889ABDB00E1911D /* JournalEntry.swift */; };
 		95720E1228AC996500A51784 /* ViewSavedJournals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95720E1128AC996500A51784 /* ViewSavedJournals.swift */; };
 		95720E1428AC9D7700A51784 /* ViewIndividualSavedJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95720E1328AC9D7700A51784 /* ViewIndividualSavedJournal.swift */; };
@@ -59,7 +58,6 @@
 /* Begin PBXFileReference section */
 		9572041E2880711300E1911D /* ViewAllJournals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllJournals.swift; sourceTree = "<group>"; };
 		95720420288073B000E1911D /* ViewIndividualJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIndividualJournal.swift; sourceTree = "<group>"; };
-		957204222886119C00E1911D /* ViewJournalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewJournalButton.swift; sourceTree = "<group>"; };
 		957204242889ABDB00E1911D /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		95720E1128AC996500A51784 /* ViewSavedJournals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSavedJournals.swift; sourceTree = "<group>"; };
 		95720E1328AC9D7700A51784 /* ViewIndividualSavedJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIndividualSavedJournal.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				9572041E2880711300E1911D /* ViewAllJournals.swift */,
 				95720420288073B000E1911D /* ViewIndividualJournal.swift */,
 				D04C38B02890B89100BE6C29 /* ExpandedJournalView.swift */,
-				957204222886119C00E1911D /* ViewJournalButton.swift */,
 			);
 			path = ViewYourJournals;
 			sourceTree = "<group>";
@@ -386,7 +383,6 @@
 				D0989F08287737E30050B0C0 /* ProfileView.swift in Sources */,
 				D08B85E22870C74C00C85152 /* Mountain_JournalApp.swift in Sources */,
 				95720E1428AC9D7700A51784 /* ViewIndividualSavedJournal.swift in Sources */,
-				957204232886119C00E1911D /* ViewJournalButton.swift in Sources */,
 				957204252889ABDB00E1911D /* JournalEntry.swift in Sources */,
 				95720421288073B000E1911D /* ViewIndividualJournal.swift in Sources */,
 			);

@@ -44,7 +44,7 @@ struct ExpandedJournalView: View {
             .navigationBarBackButtonHidden(true)
             
             Rectangle()
-                .fill(.gray)
+                .fill(.blue)
                 .frame(width: rectWidth, height:1, alignment: .center)
             
             ScrollView {
@@ -54,7 +54,7 @@ struct ExpandedJournalView: View {
             }
                 
             Rectangle()
-                .fill(.gray)
+                .fill(.blue)
                 .frame(width: rectWidth, height:1, alignment: .center)
             
             HStack {

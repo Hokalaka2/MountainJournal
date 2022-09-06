@@ -8,36 +8,91 @@
 import SwiftUI
 
 struct ProfileView: View {
+
     @Binding var userProfile: Profile
     
+    let screenSize = UIScreen.main.bounds.size
+    
     var body: some View {
-        VStack{
-            HStack{
-                ProfileImageView(image: Image("Otis_Cat"))
-                    .padding()
-                VStack{
-                    Text("\(userProfile.name)")
-                    Text("\(userProfile.email)")
-                }
-            }
-            NavigationView{
-                List{
-                    NavigationLink(destination: ViewAllJournals(userProfile: userProfile)){
-                        Text("My Locations")
+        
+        
+        let rectWidth = screenSize.width * (0.9)
+        let bigRectHeight = screenSize.height * (0.2)
+        let smallRectHeight = screenSize.height * (0.05)
+        
+        
+        ZStack {
+            Rectangle()
+                .ignoresSafeArea()
+                .foregroundColor(Color("Charcoal"))
+            VStack {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(Color("LightGray"))
+                        .frame(width: rectWidth, height: bigRectHeight)
+                    
+                    
+                    VStack {
+                        HStack{
+                            Spacer()
+                            Text("Edit")
+                                .padding(.top, 10)
+                                .padding(.trailing, 40)
+                                .foregroundColor(.white)
+                        }
+                        HStack{
+                            ProfileImageView(image: Image("Otis_Cat"))
+                                .padding([.bottom,.trailing,.leading])
+                                
+                            VStack{
+                                Text("\(userProfile.name)")
+                                    .foregroundColor(.white)
+                                Text("\(userProfile.email)")
+                                    .foregroundColor(.white)
+                            }
+                        }
                     }
-                    NavigationLink(destination: ViewSavedJournals(userProfile: userProfile)){
-                        Text("Saved Journals")
-                    }
-
                 }
-                .navigationTitle("Your Saved Info")
+                .padding(.bottom, 25.0)
                 
+                NavigationLink(destination: ViewAllJournals(userProfile: userProfile)){
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: rectWidth, height: smallRectHeight)
+                            .foregroundColor(Color("LighterGray"))
+                        HStack {
+                            Text("My Locations")
+                                .padding(.leading, 30)
+                            Spacer()
+                            Image(systemName: "arrow.right")
+                                .padding(.trailing, 30)
+                        }
+                        .foregroundColor(.white)
+                        
+                    }
+                    
+                }
+                NavigationLink(destination: ViewSavedJournals(userProfile: userProfile)){
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: rectWidth, height: smallRectHeight)
+                            .foregroundColor(Color("LighterGray"))
+                        HStack {
+                            Text("My Saved Journals")
+                                .padding(.leading, 30)
+                            Spacer()
+                            Image(systemName: "arrow.right")
+                                .padding(.trailing, 30)
+                        }
+                        .foregroundColor(.white)
+                    }
+                }
+                Spacer()
             }
-            Spacer()
         }
-        .navigationBarTitle("Profile")
     }
 }
+
 
 struct ProfileView_Previews: PreviewProvider {
     @State static var userProfile = Profile.empty

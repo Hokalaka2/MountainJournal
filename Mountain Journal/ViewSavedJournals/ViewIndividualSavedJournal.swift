@@ -30,7 +30,7 @@ struct ViewIndividualSavedJournal: View {
                 Text("by \(entry.author ?? "No Author")")
                     .font(.subheadline)
                     .fontWeight(.thin)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.blue)
             }
                 
             HStack(alignment: .bottom) {
@@ -64,8 +64,8 @@ struct ViewIndividualSavedJournal: View {
             .font(.caption)
             
             Rectangle()
-                .fill(.gray)
-                .frame(width: rectWidth, height:1, alignment: .center)
+                .fill(.blue)
+                .frame(width: rectWidth, height:2, alignment: .center)
         }
     }
 }

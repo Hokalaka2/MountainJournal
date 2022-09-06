@@ -22,23 +22,27 @@ struct ViewAllJournals: View {
     }
     
     var body: some View {
-        NavigationView {
-            ScrollView(.vertical) {
-                VStack(alignment: .leading, spacing: 15) {
-                    Text("Your Journals")
-                        .font(.headline)
-                        
-                    ForEach(entries) { testEntry in
-                        ViewIndividualJournal(entry: testEntry)
+
+        ZStack {
+            Rectangle()
+                .ignoresSafeArea()
+                .foregroundColor(.gray)
+            NavigationView {
+                ScrollView(.vertical) {
+                    VStack(alignment: .leading, spacing: 15) {
+                        Text("Your Journals")
+                            .font(.headline)
+                            
+                        ForEach(entries) { testEntry in
+                            ViewIndividualJournal(entry: testEntry)
+                        }
                     }
+                    .padding()
                 }
-                .padding()
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
             }
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
         }
-        .foregroundColor(.black)
-        
     }
         
 }
