@@ -17,7 +17,7 @@ struct ProfileView: View {
         
         
         let rectWidth = screenSize.width * (0.9)
-        let bigRectHeight = screenSize.height * (0.2)
+        let bigRectHeight = screenSize.height * (0.15)
         let smallRectHeight = screenSize.height * (0.05)
         
         
@@ -31,31 +31,29 @@ struct ProfileView: View {
                         .foregroundColor(Color("LightGray"))
                         .frame(width: rectWidth, height: bigRectHeight)
                     
-                    
                     VStack {
                         HStack{
-                            Spacer()
-                            Text("Edit")
-                                .padding(.top, 10)
-                                .padding(.trailing, 40)
-                                .foregroundColor(.white)
-                        }
-                        HStack{
                             ProfileImageView(image: Image("Otis_Cat"))
-                                .padding([.bottom,.trailing,.leading])
-                                
-                            VStack{
+                                .padding(.leading, 30)
+                            Spacer()
+                            VStack(alignment: .trailing) {
+                                Text("Edit")
+                                    .padding(.bottom, 40)
+                                    .foregroundColor(.white)
                                 Text("\(userProfile.name)")
                                     .foregroundColor(.white)
                                 Text("\(userProfile.email)")
                                     .foregroundColor(.white)
                             }
+                            .padding(.trailing, 30)
+                            .foregroundColor(.white)
+                            
                         }
                     }
                 }
                 .padding(.bottom, 25.0)
                 
-                NavigationLink(destination: ViewAllJournals(userProfile: userProfile)){
+                NavigationLink(destination: ViewSavedJournals(userProfile: userProfile)){
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: rectWidth, height: smallRectHeight)
@@ -68,10 +66,9 @@ struct ProfileView: View {
                                 .padding(.trailing, 30)
                         }
                         .foregroundColor(.white)
-                        
                     }
-                    
                 }
+                    
                 NavigationLink(destination: ViewSavedJournals(userProfile: userProfile)){
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)

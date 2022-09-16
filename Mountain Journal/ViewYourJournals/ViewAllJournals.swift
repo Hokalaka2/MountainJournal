@@ -22,11 +22,7 @@ struct ViewAllJournals: View {
     }
     
     var body: some View {
-
         ZStack {
-            Rectangle()
-                .ignoresSafeArea()
-                .foregroundColor(.gray)
             NavigationView {
                 ScrollView(.vertical) {
                     VStack(alignment: .leading, spacing: 15) {
@@ -44,7 +40,6 @@ struct ViewAllJournals: View {
             }
         }
     }
-        
 }
 
 struct ViewAllJournals_Previews: PreviewProvider {
